@@ -13,50 +13,119 @@
         <ul>
           <li><a href="#common-html-terms">Common HTML Terms</a></li>
           <li><a href="#common-html-elements">Common HTML Elements</a></li>
+          <li><a href="#identifiers-and-grouping">Identifiers and Grouping</a></li>
+          <li><a href="#special-characters-and-linking">Special Characters and Linking</a></li>
           <li><a href="#extra-knowledge">Extra Knowledge</a></li>
         </ul>
       </nav>
       <!-- Add navigation ids and values later -->
     </header>
     <main>
+      <!-- Common HTML Terms -->
       <section id="common-html-terms">
         <h2>Common HTML Terms</h2>
         <dl>
           <dt><b>Elements</b></dt>
-          <dd>Elements are the building blocks for an <abbr title="HyperText Markup Language">HTML</abbr> document. They represent headings, paragraphs, links, images and more.<br>Most HTML elements consist of an opening tag (<b>&ltelement-name&gt</b>) and a closing tag (<b>&lt/element-name&gt</b>).</dd>
+          <dd>Elements are the building blocks for an <abbr title="HyperText Markup Language">HTML</abbr> document. They represent headings, paragraphs, links, images and more.<br>Most HTML elements consist of an opening tag (<b>&ltelement-name&gt</b>) and a closing tag (<b>&lt;/element-name&gt;</b>).</dd>
           <dt><b>Void Elements</b></dt>
           <dd>Void elements cannot have any content and only have a start tag. Examples include img and meta elements.<br>It is common to see some codebases that include a forward slash (/) inside the void element. Both of these are acceptable.</dd>
-          <dt><b>Attributes</b></dt>
-          <dd>An attribute is a value placed inside the opening tag of an HTML element. Attributes provide additional information about the element or specify how the element should behave.<br>Here is the basic syntax for an attribute: (<b>&ltelement-name attribute="value"&gt&lt/element-name&gt</b>).</dd>
-          <dt><b>Boolean Attributes</b></dt>
+          <dt><b>Attribute</b></dt>
+          <dd>An attribute is a value placed inside the opening tag of an HTML element. Attributes provide additional information about the element or specify how the element should behave.<br>Here is the basic syntax for an attribute: (<b>&lt;element-name attribute="value"&gt;&lt;/element-name&gt;</b>).</dd>
+          <dt><b>Boolean Attribute</b></dt>
           <dd>A boolean attribute is an attribute that can either be present or absent in an HTML tag. If present, the value is true, otherwise it is false.<br>Examples of boolean attributes include <b>disabled</b>, <b>readonly</b>, and <b>required</b>.</dd>
         <dt><b>Comments</b></dt>
-          <dd>Comments are used in programming to leave notes for yourself and other developers in your code.<br>Here is the syntax for a comment in HTML: (<b>&lt!--This is an HTML comment.--&gt</b>).
+          <dd>Comments are used in programming to leave notes for yourself and other developers in your code.<br>Here is the syntax for a comment in HTML: (<b>&lt;!--This is an HTML comment.--&gt;</b>).
         </dl>
       </section>
+      <!-- Common HTML Elements -->
       <section id="common-html-elements">
         <h2>Common HTML Elements</h2>
         <dl>
-          <dt><b>Body Elements</b></dt>
-          <dd>This element is used to represent the content for the HTML document.<br>Here is the syntax for a body element: (<b>&ltbody&gt&lt/body&gt</b>).</dd>
+          <dt><b>Body Element</b></dt>
+          <dd>This element is used to represent the content for the HTML document.<br>Here is the syntax for a body element: (<b>&lt;body&gt;&lt;/body&gt;</b>).</dd>
+          <dt><b>Main Element</b></dt>
+          <dd>This element is used to represent the main content for a web page.<br>Here is the syntax of a main element: (<b>&lt;main&gt;&lt;/main&gt;</b>).</dd>
           <dt><b>Section Elements</b></dt>
-          <dd>This element is used to divide up content into smaller sections.<br>Here is the syntax for a section element: (<b>&ltsection&gt&lt/section&gt</b>).</dd>
+          <dd>These elements are used to divide up content into smaller sections.<br>Here is the syntax for a section element: (<b>&lt;section&gt;&lt;/section&gt;</b>).</dd>
           <dt><b>Heading Elements</b></dt>
-          <dd>There are six heading elements in HTML. The <b>h1</b> through <b>h6</b> heading elements are used to signify the importance of content below them. The lower the number, the higher the importance, so <b>h2</b> elements have less importance than <b>h1</b> elements.<br>Here is the syntax for a heading element: (<b>&lth1&gt&lt/h1&gt</b>).</dd>
+          <dd>There are six heading elements in HTML. The <b>h1</b> through <b>h6</b> heading elements are used to signify the importance of content below them. The lower the number, the higher the importance, so <b>h2</b> elements have less importance than <b>h1</b> elements.<br>Here is the syntax for a heading element: (<b>&lt;h1&gt;&lt;/h1&gt;</b>).</dd>
           <dt><b>Paragraph Elements</b></dt>
-          <dd>This is used for paragraphs on a web page.<br>Here is the syntax for a paragraph element: (<b>&ltp&gt&lt/p&gt</b>).</dd>
+          <dd>These are used for paragraphs on a web page.<br>Here is the syntax for a paragraph element: (<b>&lt;p&gt;&lt;/p&gt;</b>).</dd>
           <dt><b>Image Elements</b></dt>
-          <dd>The img element is used to add images to the web page. The <b>src attribute</b> is used to specify the location for that image. For image elements, it's good practice to include another attribute called the <b>alt attribute</b>.<br>Here's an example of an img element with the src and alt attributes:(<b>&ltimg src="img-url" alt="img-description."&gt</b>).</dd>
+          <dd>The img elements are used to add images to the web page. The <b>src attribute</b> is used to specify the location for that image. For image elements, it's good practice to include another attribute called the <b>alt attribute</b>.<br>Here's an example of an img element with the src and alt attributes:(<b>&lt;img src="img-url" alt="img-description."&gt;</b>).</dd>
           <dt><b>Div Elements</b></dt>
-          <dd>This element is a generic HTML element that does not hold any semantic meaning. It is used as a generic container to hold other HTML elements.<br>Here is the syntax for a div element: (<b>&ltdiv&gt&lt/div&gt</b>).</dd>
+          <dd>These elements are a generic HTML element that does not hold any semantic meaning. It is used as a generic container to hold other HTML elements.<br>Here is the syntax for a div element: (<b>&lt;div&gt;&lt;/div&gt;</b>).</dd>
           <dt><b>Anchor Elements</b></dt>
-          <dd>These elements are used to apply links to a web page. The <b>href attribute</b> is used to specify where the link should go when the user clicks on it.<br>Here is the syntax for an anchor element: (<b>&lta href="your-link"&gt&lt/a&gt</b>).</dd>
+          <dd>These elements are used to apply links to a web page. The <b>href attribute</b> is used to specify where the link should go when the user clicks on it.<br>Here is the syntax for an anchor element: (<b>&lt;a href="your-link"&gt;&lt;/a&gt;</b>).</dd>
           <dt><b>Unordered and Ordered List Elements</b></dt>
-          <dd>To create a <b>bulleted</b> list of items you should use the ul element with one or more <b>li elements</b> nested inside of it, or if you want to create an <b>ordered</b> list of items you should use the ol element.<br>Here is the syntax for a unordered and ordered list element respectively:(<b>&ltul&gt&ltli&gt&lt/li&gt&lt/ul&gt</b>) and (<b>&ltol&gt&ltli&gt&lt/li&gt&lt/ol&gt</b>).</dd>
+          <dd>To create a <b>bulleted</b> list of items you should use the ul element with one or more <b>li elements</b> nested inside of it, or if you want to create an <b>ordered</b> list of items you should use the ol element.<br>Here is the syntax for a unordered and ordered list element respectively:(<b>&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;</b>) and (<b>&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;</b>).</dd>
           <dt><b>Emphasis Elements</b></dt>
-          <dd>This is used to put emphasis on piece of text.<br>Here is the syntax of an emphasis element: (<b>&ltem&gt&lt/em&gt</b>).</dd>
+          <dd>These are used to put emphasis on piece of text.<br>Here is the syntax of an emphasis element: (<b>&lt;em&gt;&lt;/em&gt;</b>).</dd>
+          <dt><b>Strong Importance Elements</b></dt>
+          <dd>This element is used to place strong emphasis on text to indicate a sense of urgency and seriousness.<br>Here is the syntax of a strong importance element: (<b>&lt;strong&gt;&lt;/strong&gt;</b>).</dd>
+          <dt><b>Button Elements</b></dt>
+          <dd>These elements are used to create a clickable button.<br>Here is the syntax of a button element: (<b>&lt;button&gt;&lt;/button&gt;</b>).</dd>
+          <dt><b>Footer Element</b></dt>
+          <dd>This element is placed at the bottom of the HTML document and usually contains copyright information and other important page links.<br>Here is the syntax of a footer element: (<b>&lt;footer&gt;&gt;&lt;/footer&gt;</b>).</dd>
         </dl>
       </section>
+      <!-- Identifiers and Grouping -->
+      <section id="identifiers-and-grouping">
+        <h2>Identifiers and Grouping</h2>
+        <dl>
+          <dt><b>Ids</b></dt>
+          <dd>Unique element identifiers for HTML elements. ID names should only be used once per HTML document. ID names cannot have spaces. If your ID name contains multiple words, you can use dashes or underscores between the words.<br>Example: (<b>&lt;h1 id="id-name"&gt;&lt;/h1&gt;</b>).</dd>
+          <dt><b>Classes</b></dt>
+          <dd>Classes are used to group elements for styling and behavior. Unlike IDs, you can reuse the same class name throughout the HTML document. The class value can also have spaces.<br>Example: (<b>&lt;div class="class-name"&gt;&lt;/div&gt;)</b>.</dd>
+        </dl>
+      </section>
+      <!-- Special Characters and Linking -->
+      <section id="special-characters-and-linking">
+        <h2>Special Characters and Linking</h2>
+        <dl>
+          <dt><b>HTML Entities</b></dt>
+          <dd>An HTML entity, or character reference, is a set of characters used to represent a reserved character in HTML.<br>Examples include the ampersand (&amp;) symbol and the less than symbol (&lt;)</dd>
+          <dt><b>Link Element</b></dt>
+          <dd>This element is used to link to external resources like stylesheets and site icons.The <b>rel attribute</b> is used to specify the relationship between the linked resource and the HTML document. The <b>href attribute</b> is used to specify the location of the URL for the external resource.<br>Here is the basic syntax for using the link element for an external CSS file: (<b>&lt;link rel="stylesheet" href="./styles.css" /&gt;</b>). The src attribute is used here to specify the location for that external JavaScript file.</dd>
+          <dt><b>Script Element</b></dt>
+          <dd>This element is used to embed executable code. While you can technically write all of your JavaScript code inside the script tags, it is considered best practice to link to an external JavaScript file instead.<br>Example: (<b>&lt;script&gt;alert("Welcome to my site")&lt;/script&gt;</b>). Also here is an example of using the script element to link to an external JavaScript file: (<b>&lt;script src="path-to-javascript-file.js"&gt;&lt;/script&gt;</b>).</dd>
+        </dl>
+      </section>
+      <!-- Boilerplate and Encoding -->
+      <section id="boilerplate-and-encoding">
+        <h2>Boilerplate and Encoding</h2>
+        <dl>
+          <dt><b>HTML boilerplate</b></dt>
+          <dd>This is a boilerplate that includes the basic structure and essential elements every HTML document needs.<br>Example:(<b>&lt;!DOCTYPE html&gt;&lt;html lang="language"&gt;&lt;head&gt;&lt;meta charset="utf-8" /&gt;&lt;title&gt;title-here&lt;/title&gt;&lt;link rel="stylesheet" href="./styles.css" /&gt;&lt;/head&gt;&lt;body&gt;!--Headings, paragraphs, images, etc. go inside here--&gt;&lt;/body&gt;&lt;/html&gt;</b>).</dd>
+          <dt><b>DOCTYPE</b></dt>
+          <dd>This is used to tell browsers which version of HTML you're using.<br>Here is the syntax of DOCTYPE: (<b>&lt;!DOCTYPE html&gt;</b>).</dd>
+          <dt><b>HTML Element</b></dt>
+          <dd>This represents the top-level element or the root of an HTML document. To specify the language for the document, you should use the lang attribute.<br>Here is the syntax of an HTML element: (<b>&lt;html lang="language"&gt;&lt;/html&gt;</b>).</dd>
+          <dt><b>Head Element</b></dt>
+          <dd>The head section contains important metadata which is behind-the-scenes information needed for browsers and search engines.<br>Here is the syntax of a head element: (<b>&lt;head&gt;&lt;/head&gt;</b>).</dd>
+          <dt><b>Meta Elements</b></dt>
+          <dd>These elements represent your site's metadata. These elements have details about things like character encoding, and how websites like Twitter should preview your page's link and more.<br>Here is the syntax of a meta element: (<b>&lt;meta /&gt;</b>).</dd>
+          <dt><b>Title Element</b></dt>
+          <dd>This element is used to set the text that appears in the browser tab or window.<br>Here is the syntax of a title element: (<b>&lt;title&gt;title-here&lt;/title&gt;</b>).</dd>
+          <dt><b>UTF-8 Character Encoding</b></dt>
+          <dd>UTF-8, or UCS Transformation Format 8, is a standardized character encoding widely used on the web. Character encoding is the method computers use to store characters as data. The <b>charset attribute</b> is used inside of a meta element to set the character encoding to UTF-8.<br>Here is the syntax of a title element: (<b>&lt;meta charset="utf-8" /&gt;</b>).</dd>
+        </dl>
+      </section>
+      <!-- SEO and Social Sharing -->
+      <section id="seo-and-social-sharing">
+        <h2>SEO and Social Sharing</h2>
+        <dl>
+          <dt><b>SEO</b></dt>
+          <dd>Search Engine Optimization is a practice that optimizes web pages so they become more visible and rank higher on search engines.</dd>
+          <dt><b>Meta Description Element</b></dt>
+          <dd>This is used to provide a short description for the web page and to improve SEO.<br>Here is the syntax of a meta description element: (<b>&lt;meta name="description" content="Describe the utility of your page"/&gt;</b>).</dd>
+          <dt><b>Open Graph Tags</b></dt>
+          <dd>The open graph protocol enables you to control how your website's content appears across various social media platforms, such as Facebook, LinkedIn, and many more. By setting these open graph properties, you can entice users to want to click and engage with your content. You can set these properties through a collection of meta elements inside your HTML head section.</dd>
+          <dt><b><abbr title="Open Graph">OG</abbr>:Title Property</b></dt>
+          <dd>This is used to set the title that displays for social media posts.<br>Here is the syntax of an og:title property: (<b>&lt;meta name="description" content="Describe the utility of your page"/&gt;</b>).</dd>
+        </dl>
+      </section>
+      <!-- Extra Knowledge -->
       <section id="extra-knowledge">
         <h2>Extra Knowledge</h2>
         <dl>
