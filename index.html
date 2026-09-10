@@ -15,6 +15,9 @@
           <li><a href="#common-html-elements">Common HTML Elements</a></li>
           <li><a href="#identifiers-and-grouping">Identifiers and Grouping</a></li>
           <li><a href="#special-characters-and-linking">Special Characters and Linking</a></li>
+          <li><a href="#boilerplate-and-encoding">Boilerplate and Encoding</a></li>
+          <li><a href="#seo-and-social-sharing">SEO and Social Sharing</a></li>
+          <li><a href="#media-elements-and-optimization">Media Elements and Optimization</a></li>
           <li><a href="#extra-knowledge">Extra Knowledge</a></li>
         </ul>
       </nav>
@@ -26,15 +29,24 @@
         <h2>Common HTML Terms</h2>
         <dl>
           <dt><b>Elements</b></dt>
-          <dd>Elements are the building blocks for an <abbr title="HyperText Markup Language">HTML</abbr> document. They represent headings, paragraphs, links, images and more.<br>Most HTML elements consist of an opening tag (<b>&ltelement-name&gt</b>) and a closing tag (<b>&lt;/element-name&gt;</b>).</dd>
+          <dd>Elements are the building blocks for an <abbr title="HyperText Markup Language">HTML</abbr> document. They represent headings, paragraphs, links, images and more. Most HTML elements consist of an opening tag and a closing tag:
+<br><textarea style="width: 300px; height: 50px">
+<element-name>Text</element-name>
+</textarea></dd>
           <dt><b>Void Elements</b></dt>
-          <dd>Void elements cannot have any content and only have a start tag. Examples include img and meta elements.<br>It is common to see some codebases that include a forward slash (/) inside the void element. Both of these are acceptable.</dd>
+          <dd>Void elements cannot have any content and only have a start tag. Examples include img and meta elements.It is common to see some codebases that include a forward slash (/) inside the void element. Both of these are acceptable.</dd>
           <dt><b>Attribute</b></dt>
-          <dd>An attribute is a value placed inside the opening tag of an HTML element. Attributes provide additional information about the element or specify how the element should behave.<br>Here is the basic syntax for an attribute: (<b>&lt;element-name attribute="value"&gt;&lt;/element-name&gt;</b>).</dd>
+          <dd>An attribute is a value placed inside the opening tag of an HTML element. Attributes provide additional information about the element or specify how the element should behave.Here is the basic syntax for an attribute:
+<br><textarea style="width: 400px; height: 50px">
+<element-name attribute="value"></element-name>
+</textarea></dd>
           <dt><b>Boolean Attribute</b></dt>
-          <dd>A boolean attribute is an attribute that can either be present or absent in an HTML tag. If present, the value is true, otherwise it is false.<br>Examples of boolean attributes include <b>disabled</b>, <b>readonly</b>, and <b>required</b>.</dd>
-        <dt><b>Comments</b></dt>
-          <dd>Comments are used in programming to leave notes for yourself and other developers in your code.<br>Here is the syntax for a comment in HTML: (<b>&lt;!--This is an HTML comment.--&gt;</b>).
+          <dd>A boolean attribute is an attribute that can either be present or absent in an HTML tag. If present, the value is true, otherwise it is false. Examples of boolean attributes include <b>disabled</b>, <b>readonly</b>, and <b>required</b>.</dd>
+          <dt><b>Comments</b></dt>
+          <dd>Comments are used in programming to leave notes for yourself and other developers in your code. Here is the syntax for a comment in HTML:
+<br><textarea style="width: 300px; height: 50px">
+<!--This is an HTML comment.-->
+</textarea></dd>
         </dl>
       </section>
       <!-- Common HTML Elements -->
@@ -42,23 +54,63 @@
         <h2>Common HTML Elements</h2>
         <dl>
           <dt><b>Body Element</b></dt>
-          <dd>This element is used to represent the content for the HTML document.<br>Here is the syntax for a body element: (<b>&lt;body&gt;&lt;/body&gt;</b>).</dd>
+          <dd>This element is used to represent the content for the HTML document. Here is the syntax for a body element:
+<br><textarea style="width: 300px; height: 50px">
+<body>
+            
+</body>
+</textarea></dd>
           <dt><b>Main Element</b></dt>
-          <dd>This element is used to represent the main content for a web page.<br>Here is the syntax of a main element: (<b>&lt;main&gt;&lt;/main&gt;</b>).</dd>
+          <dd>This element is used to represent the main content for a web page. Here is the syntax of a main element:
+<br><textarea style="width: 300px; height: 50px">
+<main>
+            
+</main>
+</textarea></dd>
           <dt><b>Section Elements</b></dt>
-          <dd>These elements are used to divide up content into smaller sections.<br>Here is the syntax for a section element: (<b>&lt;section&gt;&lt;/section&gt;</b>).</dd>
+          <dd>These elements are used to divide up content into smaller sections. Here is the syntax for a section element:
+<br><textarea style="width: 300px; height: 50px"><section>
+            
+</section>
+</textarea></dd>
           <dt><b>Heading Elements</b></dt>
-          <dd>There are six heading elements in HTML. The <b>h1</b> through <b>h6</b> heading elements are used to signify the importance of content below them. The lower the number, the higher the importance, so <b>h2</b> elements have less importance than <b>h1</b> elements.<br>Here is the syntax for a heading element: (<b>&lt;h1&gt;&lt;/h1&gt;</b>).</dd>
+          <dd>There are six heading elements in HTML. The <b>h1</b> through <b>h6</b> heading elements are used to signify the importance of content below them. The lower the number, the higher the importance, so <b>h2</b> elements have less importance than <b>h1</b> elements. Here is the syntax for a heading element:
+<br><textarea style="width: 300px; height: 50px">
+<h1>Title</h1>
+</textarea></dd>
           <dt><b>Paragraph Elements</b></dt>
-          <dd>These are used for paragraphs on a web page.<br>Here is the syntax for a paragraph element: (<b>&lt;p&gt;&lt;/p&gt;</b>).</dd>
+          <dd>These are used for paragraphs on a web page. Here is the syntax for a paragraph element:
+<br><textarea style="width: 300px; height: 50px">
+<p>Text</p>
+</textarea></dd>
           <dt><b>Image Elements</b></dt>
-          <dd>The img elements are used to add images to the web page. The <b>src attribute</b> is used to specify the location for that image. For image elements, it's good practice to include another attribute called the <b>alt attribute</b>.<br>Here's an example of an img element with the src and alt attributes:(<b>&lt;img src="img-url" alt="img-description."&gt;</b>).</dd>
+          <dd>The img elements are used to add images to the web page. The <b>src attribute</b> is used to specify the location for that image. For image elements, it's good practice to include another attribute called the <b>alt attribute</b>. Here's an example of an img element with the src and alt attributes:
+<br><textarea style="width: 400px; height: 50px">
+<img src="img-url" alt="Describe the image.">
+</textarea></dd>
           <dt><b>Div Elements</b></dt>
-          <dd>These elements are a generic HTML element that does not hold any semantic meaning. It is used as a generic container to hold other HTML elements.<br>Here is the syntax for a div element: (<b>&lt;div&gt;&lt;/div&gt;</b>).</dd>
+          <dd>These elements are a generic HTML element that does not hold any semantic meaning. It is used as a generic container to hold other HTML elements. Here is the syntax for a div element:
+<br><textarea style="width: 300px; height: 50px">
+<div>
+            
+</div>
+</textarea></dd>
           <dt><b>Anchor Elements</b></dt>
-          <dd>These elements are used to apply links to a web page. The <b>href attribute</b> is used to specify where the link should go when the user clicks on it.<br>Here is the syntax for an anchor element: (<b>&lt;a href="your-link"&gt;&lt;/a&gt;</b>).</dd>
+          <dd>These elements are used to apply links to a web page. The <b>href attribute</b> is used to specify where the link should go when the user clicks on it. Here is the syntax for an anchor element:
+<br><textarea style="width: 400px; height: 50px">
+<a href="link-here"></a>
+</textarea></dd>
           <dt><b>Unordered and Ordered List Elements</b></dt>
-          <dd>To create a <b>bulleted</b> list of items you should use the ul element with one or more <b>li elements</b> nested inside of it, or if you want to create an <b>ordered</b> list of items you should use the ol element.<br>Here is the syntax for a unordered and ordered list element respectively:(<b>&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;</b>) and (<b>&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;</b>).</dd>
+          <dd>To create a <b>bulleted</b> list of items you should use the ul element with one or more <b>li elements</b> nested inside of it, or if you want to create an <b>ordered</b> list of items you should use the ol element. Here is the syntax for a unordered and ordered list element respectively:
+<br><textarea style="width: 400px; height: 120px">
+<ul>
+  <li>Text</li>
+</ul>
+
+<ol>
+  <li>Text</li>
+</ol>
+</textarea></dd>
           <dt><b>Emphasis Elements</b></dt>
           <dd>These are used to put emphasis on piece of text.<br>Here is the syntax of an emphasis element: (<b>&lt;em&gt;&lt;/em&gt;</b>).</dd>
           <dt><b>Strong Importance Elements</b></dt>
@@ -95,7 +147,7 @@
       <section id="boilerplate-and-encoding">
         <h2>Boilerplate and Encoding</h2>
         <dl>
-          <dt><b>HTML boilerplate</b></dt>
+          <dt><b>HTML Boilerplate</b></dt>
           <dd>This is a boilerplate that includes the basic structure and essential elements every HTML document needs.<br>Example:(<b>&lt;!DOCTYPE html&gt;&lt;html lang="language"&gt;&lt;head&gt;&lt;meta charset="utf-8" /&gt;&lt;title&gt;title-here&lt;/title&gt;&lt;link rel="stylesheet" href="./styles.css" /&gt;&lt;/head&gt;&lt;body&gt;!--Headings, paragraphs, images, etc. go inside here--&gt;&lt;/body&gt;&lt;/html&gt;</b>).</dd>
           <dt><b>DOCTYPE</b></dt>
           <dd>This is used to tell browsers which version of HTML you're using.<br>Here is the syntax of DOCTYPE: (<b>&lt;!DOCTYPE html&gt;</b>).</dd>
@@ -118,13 +170,40 @@
           <dt><b>SEO</b></dt>
           <dd>Search Engine Optimization is a practice that optimizes web pages so they become more visible and rank higher on search engines.</dd>
           <dt><b>Meta Description Element</b></dt>
-          <dd>This is used to provide a short description for the web page and to improve SEO.<br>Here is the syntax of a meta description element: (<b>&lt;meta name="description" content="Describe the utility of your page"/&gt;</b>).</dd>
+          <dd>This is used to provide a short description for the web page and to improve SEO.<br>Here is the syntax of a meta description element: (<b>&lt;meta name="description" content="Describe the utility of your page" /&gt;</b>).</dd>
           <dt><b>Open Graph Tags</b></dt>
           <dd>The open graph protocol enables you to control how your website's content appears across various social media platforms, such as Facebook, LinkedIn, and many more. By setting these open graph properties, you can entice users to want to click and engage with your content. You can set these properties through a collection of meta elements inside your HTML head section.</dd>
           <dt><b><abbr title="Open Graph">OG</abbr>:Title Property</b></dt>
-          <dd>This is used to set the title that displays for social media posts.<br>Here is the syntax of an og:title property: (<b>&lt;meta name="description" content="Describe the utility of your page"/&gt;</b>).</dd>
+          <dd>This is used to set the title that displays for social media posts.<br>Here is the syntax of an og:title property: (<b>&lt;meta property="og:title" content="site-title" /&gt;</b>).</dd>
+          <dt><b><abbr title="Open Graph">OG</abbr>:Type Property</b></dt>
+          <dd>The type property is used to represent the type of content being shared on social media. Examples of this content include articles, websites, videos, or music.<br>Here is the syntax of an og:type property: (<b>&lt;meta property="og:type" content="website" /&gt;</b>).</dd>
+          <dt><b><abbr title="Open Graph">OG</abbr>:Image Property</b></dt>
+          <dd>This is used to set the image shown for social media posts.<br>Here is the syntax of an og:image property: (<b>&lt;meta property="og:image" content="img-url" /&gt;</b>).</dd>
+          <dt><b><abbr title="Open Graph">OG</abbr>:<abbr title="Uniform Resource Locator">URL</abbr> Property</b></dt>
+          <dd>This is used to set the URL that users will click on for the social media posts.<br>Here is the syntax of an og:url property: (<b>&lt;meta property="og:url" content="site-url" /&gt;</b>).</dd>
         </dl>
       </section>
+      <!-- Media Elements and Optimization -->
+      <section id="media-elements-and-optimization">
+        <h2>Media Elements and Optimization</h2>
+        <dl>
+          <dt><b>Replaced Element</b></dt>
+          <dd>A replaced element is an element whose content is determined by an external resource rather than by CSS itself. An example would be an <b>iframe element</b>. Iframe stands for inline frame. It's an inline element used to embed other HTML content directly within the HTML page. You can include the allowfullscreen attribute which allows the user to display the iframe in full screen mode. To embed a video within an iframe you can copy it directly from popular video services like YouTube and Vimeo, or define it yourself with the src attribute pointing to the URL of that video.<br>Here is the syntax of an iframe element: (<b>&lt;iframe src="video-url" title="video-player-title" width="560" height="315" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;</b>).<br>There are some other replaced elements, such as video and embed. And some elements behave as replaced elements under specific circumstances.<br>Here's an example of an input element with the type attribute set to image: (<b>&lt;input type="image" alt="Descriptive text goes here" src="example-img-url"&gt;</b>).</dd>
+          <dt><b>Optimizing Media</b></dt>
+          <dd>There are three tools to consider when using media, such as images, on your web pages: the size, the format, and the compression. A compression algorithm is used to reduce the size for files or data.</dd>
+          <dt><b>Image Licenses</b></dt>
+          <dd>An image under the public domain has no copyright attached to it and is free to be used without any restrictions. Images licensed specifically under the Creative Commons 0 license are considered public domain. Some images might be released under a permissive license, like a Creative Commons license, or a BSD license.</dd>
+          <dt><b>SVGs</b></dt>
+          <dd>Scalable Vector Graphics track data based on paths and equations to plot points, lines, and curves. What this really means is that a vector graphic, like an SVG, can be scaled to any size without impacting the quality.</dd>
+        </dl>
+      </section>
+      <!-- Multimedia Integration -->
+      <section id="multimedia Integration">
+        <h2>Multimedia Integration</h2>
+        <dl>
+          <dt><b>Lorem Ipsum</b></dt>
+          <dd>Placeholder text used in design and publishing to show how a layout looks without real content getting in the way.</dd>
+        </dl>
       <!-- Extra Knowledge -->
       <section id="extra-knowledge">
         <h2>Extra Knowledge</h2>
