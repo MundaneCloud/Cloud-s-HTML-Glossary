@@ -18,12 +18,18 @@
           <li><a href="#boilerplate-and-encoding">Boilerplate and Encoding</a></li>
           <li><a href="#seo-and-social-sharing">SEO and Social Sharing</a></li>
           <li><a href="#media-elements-and-optimization">Media Elements and Optimization</a></li>
+          <li><a href="#multimedia-integration">Multimedia Integration</a></li>
+          <li><a href="#target-attribute-types">Target Attribute Types</a></li>
+          <li><a href="#absolute-vs-relative-paths">Absolute vs. Relative Paths</a></li>
+          <li><a href="#link-states">Link States</a></li>
+          <li><a href="#importance-of-semantic-html">Importance of Semantic HTML</a></li>
+          <li><a href="#semantic-html-elements">Semantic HTML Elements</a></li>
           <li><a href="#extra-knowledge">Extra Knowledge</a></li>
         </ul>
       </nav>
-      <!-- Add navigation ids and values later -->
     </header>
     <main>
+      
       <!-- Common HTML Terms -->
       <section id="common-html-terms">
         <h2>Common HTML Terms</h2>
@@ -49,6 +55,7 @@
 </textarea></dd>
         </dl>
       </section>
+      
       <!-- Common HTML Elements -->
       <section id="common-html-elements">
         <h2>Common HTML Elements</h2>
@@ -135,6 +142,7 @@
 </textarea></dd>
         </dl>
       </section>
+      
       <!-- Identifiers and Grouping -->
       <section id="identifiers-and-grouping">
         <h2>Identifiers and Grouping</h2>
@@ -153,6 +161,7 @@
 </textarea></dd>
         </dl>
       </section>
+      
       <!-- Special Characters and Linking -->
       <section id="special-characters-and-linking">
         <h2>Special Characters and Linking</h2>
@@ -160,7 +169,7 @@
           <dt><b>HTML Entities</b></dt>
           <dd>An HTML entity, or character reference, is a set of characters used to represent a reserved character in HTML. Examples include the ampersand (&amp;) symbol and the less than symbol (&lt;)</dd>
           <dt><b>Link Element</b></dt>
-          <dd>This element is used to link to external resources like stylesheets and site icons.The <b>rel attribute</b> is used to specify the relationship between the linked resource and the HTML document. The <b>href attribute</b> is used to specify the location of the URL for the external resource. Here is the basic syntax for using the link element for an external CSS file:
+          <dd>This element is used to link to external resources like stylesheets and site icons.The <b>rel attribute</b> is used to specify the relationship between the linked resource and the HTML document. The <b>href attribute</b> is used to specify the location of the <abbr title="Uniform Resource Locator">URL</abbr> for the external resource. Here is the basic syntax for using the link element for an external CSS file:
 <br><textarea style="width: 400px; height: 50px">
 <link rel="stylesheet" href="./styles.css" />
 </textarea></dd>
@@ -177,6 +186,7 @@
 </textarea></dd>
         </dl>
       </section>
+      
       <!-- Boilerplate and Encoding -->
       <section id="boilerplate-and-encoding">
         <h2>Boilerplate and Encoding</h2>
@@ -232,6 +242,7 @@
 </textarea></dd>
         </dl>
       </section>
+      
       <!-- SEO and Social Sharing -->
       <section id="seo-and-social-sharing">
         <h2>SEO and Social Sharing</h2>
@@ -260,13 +271,14 @@
 <br><textarea style="width: 500px; height: 50px">
 <meta property="og:image" content="img-url" />
 </textarea></dd>
-          <dt><b><abbr title="Open Graph">OG</abbr>:<abbr title="Uniform Resource Locator">URL</abbr> Property</b></dt>
+          <dt><b><abbr title="Open Graph">OG</abbr>:URL Property</b></dt>
           <dd>This is used to set the URL that users will click on for the social media posts. Here is the syntax of an og:url property:
 <br><textarea style="width: 500px; height: 50px">
 <meta property="og:url" content="site-url" />
 </textarea></dd>
         </dl>
       </section>
+      
       <!-- Media Elements and Optimization -->
       <section id="media-elements-and-optimization">
         <h2>Media Elements and Optimization</h2>
@@ -292,13 +304,158 @@
           <dd>Scalable Vector Graphics track data based on paths and equations to plot points, lines, and curves. What this really means is that a vector graphic, like an SVG, can be scaled to any size without impacting the quality.</dd>
         </dl>
       </section>
+      
       <!-- Multimedia Integration -->
-      <section id="multimedia Integration">
+      <section id="multimedia-integration">
         <h2>Multimedia Integration</h2>
+        <dl>
+          <dt><b>Audio and Video Elements</b></dt>
+          <dd>The audio and video elements allow you to add sound and video content to your HTML documents. The audio element supports popular audio formats like mp3, wav, and ogg. The video element supports mp4, ogg, and webm formats. If you want to see the audio player on the page, then you can add the audio element with the controls attribute:
+<br><textarea style="width: 300px; height: 150px">
+<audio
+  src="audio-url"
+  controls
+  autoplay
+  loop
+  muted
+></audio>
+</textarea>
+<br>The controls attribute enables users to manage audio playback, including adjusting volume, and pausing, or resuming playback. The controls attribute is a boolean attribute that can be added to an element to enable built-in playback controls. If omitted, no controls will be shown.</dd>
+          <dt><b>Autoplay Attribute</b></dt>
+          <dd>The autoplay attribute is a boolean attribute that makes the audio or video start playing automatically as soon as it can do so without stopping.</dd>
+          <dt><b>Loop Attribute</b></dt>
+          <dd>The loop attribute is a boolean attribute that makes the audio replay continuously.</dd>
+          <dt><b>Muted Attribute</b></dt>
+          <dd>When present in the audio element, the muted boolean attribute will start the audio in a muted state.</dd>
+          <dt><b>Source Element</b></dt>
+          <dd>When it comes to audio file types, there are differences in which browsers support which type. To accommodate this, you can use source elements inside the audio element and the browser will select the first source that it understands. Here's an example of using multiple source elements for an audio element:
+<br><textarea style="width: 400px; height: 100px">
+<audio controls>
+  <source src="audio.ogg" type="audio/ogg" />
+  <source src="audio.wav" type="audio/wav" />
+  <source src="audio.mp3" type="audio/mpeg" />
+</audio>
+</textarea>
+<br>All the attributes we have learned so far are also supported in the video element. Here's an example of using a video element with the loop, controls, and muted attributes:
+<br><textarea style="width: 300px; height: 120px">
+<video
+  src="video-url"
+  loop
+  controls
+  muted
+></video>
+</textarea></dd>
+          <dt><b>Poster Attribute</b></dt>
+          <dd>If you wanted to display an image while the video is downloading, you can use the poster attribute. This attribute is not available for audio elements and is unique to the video element.
+<br><textarea style="width: 300px; height: 150px">
+<video
+  src="video-url"
+  loop
+  controls
+  muted
+  poster="img-url"
+  width="width-value"
+></video>
+</textarea></dd>
+        </dl>
+      </section>
+      
+      <!-- Target Attribute Types -->
+      <section id="target-attribute-types">
+        <h2>Target Attribute Types</h2>
+        <dl>
+          <dt><b>Target Attribute</b></dt>
+          <dd>This attribute tells the browser where to open the URL for the anchor element. There are four important possible values for this attribute: _self, _blank, _parent, and _top. There is a fifth value, called _unfencedTop, which is currently used for the experimental FencedFrame API. You probably won't have a reason to use this one yet.</dd>
+          <dt><b>_self Value</b></dt>
+          <dd>This is the default value for the target attribute. This opens the link in the current browsing context. In most cases, this will be the current tab or window.
+<br><textarea style="width: 300px; height: 150px">
+<a href="link-url" target="_self">Text</a>
+</textarea></dd>
+          <dt><b>_blank Value</b></dt>
+          <dd>This opens the link in a new browsing context. Typically, this will open in a new tab. But some users might configure their browsers to open a new window instead.
+<br><textarea style="width: 300px; height: 150px">
+<a href="link-url" target="_blank">Text</a>
+</textarea></dd>
+          <dt><b>_parent Value</b></dt>
+          <dd>This opens the link in the parent of the current context. For example, if your website has an iframe, a _parent value in that iframe would open in your website's tab/window, not in the embedded frame.
+<br><textarea style="width: 300px; height: 150px">
+<a href="link-url" target="_parent">Text</a>
+</textarea></dd>
+          <dt><b>_top Value</b></dt>
+          <dd>This opens the link in the top-most browsing context, think "the parent of the parent". This is similar to _parent, but the link will always open in the full browser tab/window, even for nested embedded frames.
+<br><textarea style="width: 300px; height: 150px">
+<a href="link-url" target="_top">Text</a>
+</textarea></dd>
+        </dl>
+      </section>
+      
+      <!-- Absolute vs. Relative Paths -->
+      <section id="absolute-vs-relative-paths">
+        <h2>Absolute vs. Relative Paths</h2>
+        <dl>
+          <dt><b>Path Definition</b></dt>
+          <dd>A path is a string that specifies the location of a file or directory in a file system. In web development, paths let developers link to resources like images, stylesheets, scripts, and other web pages.</dd>
+          <dt><b>Path Syntax</b></dt>
+          <dd>There are three key syntaxes to know. First is the slash, which can be a backslash (\) or forward slash (/) depending on your operating system. The second is the single dot (.). And finally, we have the double dot (..). The slash is known as the "path separator". It is used to indicate a break in the text between folder or file names. A single dot points to the current directory, and two dots point to the parent directory.
+<br><textarea style="width: 300px; height: 150px">
+public/index.html
+./favicon.ico
+../src/index.css
+</textarea></dd>
+          <dt><b>Absolute Path</b></dt>
+          <dd>An absolute path is a complete route to a resource within a file system. It starts from the root directory, includes every other directory, and finally the filename and extension. The "root directory" refers to the top-level directory or folder in a hierarchy.</dd>
+          <dt><b>Absolute URL</b></dt>
+          <dd>An absolute URL builds on the absolute path for resources on the web. In addition to the path, it includes the protocol, which could be http, https, or file, and the domain name. Here's an example of an absolute URL:
+<br><textarea style="width: 300px; height: 150px">
+<a href="link-url">Text</a>
+</textarea></dd>
+          <dt><b>Relative Path</b></dt>
+          <dd> A relative path specifies the location of a file relative to the directory of the current file. It does not include the protocol or the domain name, making it shorter and more flexible for internal links within the same website. Here's an example of linking to the about.html page from the contact.html page, both of which are in the same folder:
+<br><textarea style="width: 300px; height: 150px">
+<p>Read more on the <a href="about.html">About Page</a>.</p>
+</textarea></dd>
+        </dl>
+      </section>
+      
+      <!-- Link States -->
+      <section id="link-states">
+        <h2>Link States</h2>
+        <dl>
+          <dt><b>:link</b></dt>
+          <dd>This is the default state. This state represents a link which the user has not visited, clicked, or interacted with yet. You can think of this state as providing the base styles for all links on your page. The other states build on top of it.</dd>
+          <dt><b>:visited</b></dt>
+          <dd>This applies when a user has already visited the page being linked to. By default, this turns the link purple, but you can leverage CSS to provide a different visual indication to the user.</dd>
+          <dt><b>:hover</b></dt>
+          <dd>This state applies when a user is hovering their cursor over a link. This state is helpful for providing extra attention to a link, to ensure a user actually intends to click it.</dd>
+          <dt><b>:focus</b></dt>
+          <dd>This state applies when we focus on a link.</dd>
+          <dt><b>:active</b></dt>
+          <dd>This state applies to links that are being activated by the user. This typically means clicking on the link with the primary mouse button by left clicking, in most cases.</dd>
+        </dl>
+      </section>
+      
+      <!-- Importance of Semantic HTML -->
+      <section id="importance-of-semantic-html">
+        <h2>Importance of Semantic HTML</h2>
+        <dl>
+          <dt><b>Structural Hierarchy For Heading Elements</b></dt>
+          <dd>It is important to use the correct heading element to maintain the structural hierarchy of the content. The h1 element is the highest level of heading and the h6 element is the lowest level of heading. Skipping heading levels disrupts the logical hierarchy for screen readers and hinders accessibility.</dd>
+          <dt><b>Presentational HTML Elements</b></dt>
+          <dd>Elements that define the appearance of content. Ex. the deprecated center, big and font elements.</dd>
+          <dt><b>Semantic HTML Elements</b></dt>
+          <dd>Elements that hold meaning and structure. Ex. header, nav, figure.</dd>
+        </dl>
+      </section>
+      
+      <!-- Semantic HTML Elements -->
+      <section id="semantic-html-elements">
+        <h2>Semantic HTML Elements</h2>
         <dl>
           <dt><b>Lorem Ipsum</b></dt>
           <dd>Placeholder text used in design and publishing to show how a layout looks without real content getting in the way.</dd>
         </dl>
+      </section>
+      
       <!-- Extra Knowledge -->
       <section id="extra-knowledge">
         <h2>Extra Knowledge</h2>
@@ -307,6 +464,7 @@
           <dd>Placeholder text used in design and publishing to show how a layout looks without real content getting in the way.</dd>
         </dl>
       </section>
+      
     </main>
     <footer>
       <p>&#169; MundaneCloud - All Rights Reserved</p>
